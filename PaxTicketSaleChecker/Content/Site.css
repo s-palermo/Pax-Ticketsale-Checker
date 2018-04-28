@@ -1,0 +1,56 @@
+﻿body {
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*bottom border removed: 130306*/
+
+
+
+.header {
+    background: #0099cc;
+    /*border removed*/
+    padding: 2%;
+    box-shadow: 0 5px 10px #aaa;
+    text-align:center;
+    -webkit-box-shadow: 0 5px 10px #aaa;
+    -moz-box-shadow: 0 5px 10px #aaa;
+}
+.header > h1 {
+    color: white;
+    font-family: arial, helvetica, san-serif;
+    font-size: 15em;
+    line-height: 1.1;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: #0099cc;
+    box-shadow: 0 5px 10px #aaa;
+    text-align: center;
+    -webkit-box-shadow: 0 5px 10px #aaa;
+    -moz-box-shadow: 0 5px 10px #aaa;
+}
+
+.footer > h1 {
+    color: white;
+    font-family: arial, helvetica, san-serif;
+    font-size: 15em;
+    line-height: 1.1;
+}

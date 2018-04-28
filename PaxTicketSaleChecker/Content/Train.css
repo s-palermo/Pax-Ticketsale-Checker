@@ -1,0 +1,358 @@
+﻿* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body,
+.trainContainer {
+    height: 100%;
+}
+
+body {
+    background: #e2e2e2;
+    font-size: 0.35em;
+}
+
+ul {
+    list-style: none;
+}
+
+.trainContainer {
+    position: relative;
+    padding: 10em 1em 1em 1em;
+}
+/**** Engine ****/
+.engine {
+    position: absolute;
+    left: 35%;
+}
+
+.engineControl {
+    background: #000;
+    border-radius: 0 0 0 1.3em;
+    height: 17em;
+    float: left;
+    position: relative;
+    width: 13em;
+}
+
+    .engineControl:before {
+        background: #000;
+        border-radius: 2em;
+        content: "";
+        display: block;
+        position: relative;
+        left: -1em;
+        height: 2.5em;
+        top: -0.5em;
+        width: 15em;
+    }
+
+    .engineControl:after {
+        background: #fff;
+        border-radius: 0.6em;
+        content: "";
+        left: 23%;
+        height: 7em;
+        position: absolute;
+        top: 22%;
+        width: 7em;
+    }
+
+.mainEngine {
+    margin-top: 1em;
+    position: relative;
+    float: left;
+}
+
+.chimney {
+    background: #000;
+    -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 24% 100%);
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 24% 100%);
+    height: 4em;
+    position: relative;
+    left: 5em;
+    width: 4.5em;
+}
+
+.engineCase {
+    background: #000;
+    border-radius: 0 9rem 9rem 0;
+    height: 12em;
+    width: 18em;
+}
+
+.headLamp {
+    background: #000;
+    border-radius: 50%;
+    height: 4em;
+    width: 4em;
+    position: absolute;
+    top: 49%;
+    right: -7%;
+}
+
+    .headLamp:after {
+        animation: lampAnim 4s ease infinite alternate;
+        background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 91%);
+        content: "";
+        -webkit-clip-path: polygon(0 35%, 100% 0, 100% 100%, 0 65%);
+        clip-path: polygon(0 35%, 100% 0, 100% 100%, 0 65%);
+        height: 9em;
+        left: 80%;
+        position: absolute;
+        width: 22em;
+        top: -63%;
+    }
+
+@keyframes lampAnim {
+    0% {
+        width: 12em;
+    }
+
+    100% {
+        width: 22em;
+    }
+}
+
+.engineWheel {
+    clear: both;
+    position: relative;
+}
+
+    .engineWheel ul li {
+        animation: rotateSpoke 50s linear infinite;
+        background: #fff;
+        border: 0.8em solid #000;
+        display: inline-block;
+        border-radius: 5em;
+        height: 8em;
+        margin-right: 1.6em;
+        margin-top: -1em;
+        position: relative;
+        width: 8em;
+    }
+
+        .engineWheel ul li .centerDot {
+            background: #fff;
+            border-radius: 2em;
+            border: 0.5em solid #000;
+            left: 26%;
+            height: 3em;
+            position: absolute;
+            width: 3em;
+            top: 26%;
+        }
+
+        .engineWheel ul li .spokes {
+            background: #000;
+            height: 2.1em;
+            position: absolute;
+            width: 0.7em;
+        }
+
+        .engineWheel ul li .spokes1 {
+            left: 44%;
+            top: -1%;
+            transform: rotate(0deg);
+        }
+
+        .engineWheel ul li .spokes2 {
+            right: 15%;
+            top: 15%;
+            transform: rotate(50deg);
+        }
+
+        .engineWheel ul li .spokes3 {
+            right: 15%;
+            bottom: 15%;
+            transform: rotate(-50deg);
+        }
+
+        .engineWheel ul li .spokes4 {
+            left: 16%;
+            bottom: 13%;
+            transform: rotate(50deg);
+        }
+
+        .engineWheel ul li .spokes5 {
+            left: 12%;
+            top: 19%;
+            transform: rotate(-50deg);
+        }
+
+        .engineWheel ul li .spokes6 {
+            bottom: 0;
+            left: 46%;
+            transform: rotate(0deg);
+        }
+
+@keyframes rotateSpoke {
+    0 {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(3600deg);
+    }
+}
+
+.wheelConnector span {
+    background: #000;
+    display: inline-block;
+    height: 0.75em;
+    position: absolute;
+    width: 5.4em;
+    bottom: 25%;
+    left: 6.5%;
+    transform: rotate(10deg);
+}
+
+.wheelConnector .connector2 {
+    left: 17.8%;
+    top: 26%;
+}
+
+.trainCompartment {
+    position: absolute;
+    left: 5%;
+    float: left;
+}
+
+.compartmentBody {
+    background: #000;
+    border-radius: 1.5em;
+    height: 17em;
+    width: 23em;
+}
+
+    .compartmentBody:before {
+        background: #000;
+        border-radius: 2em;
+        content: "";
+        display: block;
+        position: relative;
+        left: -1em;
+        height: 2.5em;
+        top: -0.5em;
+        width: 25em;
+        text-align: center;
+    }
+
+    .compartmentBody:after {
+        background: none;
+        border: 1em solid #000;
+        content: "";
+        height: 2em;
+        position: absolute;
+        right: -3%;
+        width: 5em;
+        top: 30%;
+    }
+
+.compartmentWindows {
+    text-align: center;
+}
+
+    .compartmentWindows li {
+        background: #fff;
+        border-radius: 0.6em;
+        display: inline-block;
+        height: 5em;
+        margin: 1em 1em 0;
+        width: 5em;
+    }
+
+.trainCompartment .engineWheel ul li {
+    margin-right: 6em;
+}
+
+.trainTrack {
+    background: #000;
+    border-bottom: 1em dashed #bbb;
+    left: 0;
+    position: absolute;
+    top: 33em;
+    width: 100%;
+}
+
+/**** Clouds ****/
+.mainCloud {
+    left: 3em;
+    position: absolute;
+    top: -2.3em;
+    z-index: 1;
+}
+
+.cloud {
+    background: #D3D3D3;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5em;
+    box-shadow: 0px 8px 12px rgba(0,0,0,0.2);
+    height: 2.3em;
+    position: absolute;
+    width: 8em;
+}
+
+    .cloud:after, .cloud:before {
+        background: #D3D3D3;
+        content: '';
+        position: absolute;
+        z-indeX: -1;
+    }
+
+    .cloud:after {
+        border-radius: 50em;
+        left: 1em;
+        height: 2.5em;
+        top: -1.2em;
+        width: 2.5em;
+        z-index: 1;
+    }
+
+    .cloud:before {
+        border-radius: 50em;
+        left: 3em;
+        height: 4em;
+        top: -2em;
+        width: 4em;
+        z-index: 1;
+    }
+
+.cloud1 {
+    animation: animateCloud 4s linear infinite;
+    opacity: 0;
+}
+
+.cloud2 {
+    animation: animateCloud1 4s linear 2s infinite;
+    opacity: 0;
+}
+
+@keyframes animateCloud {
+    0% {
+        margin-top: 0;
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: -10em;
+        opacity: 0;
+        transform: scale(0.1);
+    }
+}
+
+@keyframes animateCloud1 {
+    0% {
+        margin-top: 0;
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: -10em;
+        opacity: 0;
+        transform: scale(0.1);
+    }
+}
